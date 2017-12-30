@@ -6,9 +6,10 @@ const score = new Score(10);
 let animator=undefined;
 
 const animateSnake=function() {
-  let oldHead=snake.getHead();
-  let oldTail=snake.move();
-  let head=snake.getHead();
+  let details = game.move();
+  let oldHead=details.oldHead;
+  let oldTail=details.oldTail;
+  let head=details.head;
   paintBody(oldHead);
   unpaintSnake(oldTail);
   paintHead(head);
@@ -16,7 +17,7 @@ const animateSnake=function() {
     game.updateScore();
     showScore();
     game.grow();
-    createFood(numberOfRows,numberOfCols);
+    game.createFood(numberOfRows,numberOfCols);
     drawFood(game.getFood());
   }
 }
