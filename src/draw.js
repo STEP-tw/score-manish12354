@@ -31,7 +31,7 @@ const unpaintSnake=function(pos) {
 
 const showScore = function(){
   let scoreId = document.getElementById("score");
-  scoreId.innerText=`score: ${score.getScore()}`;
+  scoreId.innerText=`score: ${game.getScore()}`;
 }
 
 const drawSnake=function(snake) {
@@ -42,5 +42,8 @@ const drawSnake=function(snake) {
 }
 
 const drawFood=function(food) {
-  paintCell(food,"food");
+  if(food.isSuperFood())
+    paintCell(food.getPosition(),"super-food");
+  else
+  paintCell(food.getPosition(),"food");
 }
