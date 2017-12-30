@@ -31,7 +31,7 @@ const unpaintSnake=function(pos) {
 
 const showScore = function(){
   let scoreId = document.getElementById("score");
-  scoreId.innerText=`score: ${game.getScore()}`;
+  scoreId.innerText=`score: ${score.getScore()}`;
 }
 
 const drawSnake=function(snake) {

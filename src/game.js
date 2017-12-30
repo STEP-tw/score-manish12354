@@ -1,11 +1,12 @@
-const Game = function(){
+const Score = function(increment){
+  this.increment = increment;
   this.score = 0;
 };
 
-Game.prototype.updateScore = function(){
-  this.score+=10;
+Score.prototype.updateScore = function(){
+  this.score+=this.increment;
 };
 
-Game.prototype.getScore = function(){
+Score.prototype.getScore = function(){
   return this.score;
 };
