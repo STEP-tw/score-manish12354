@@ -24,3 +24,12 @@
   background-color: blue;
   border-radius: 50%;
 }
+
+#score{
+  border: 1px solid black;
+  font-weight: bold;
+  width: 120px;
+  margin-left: 48%;
+  text-align: center;
+  margin-top: 1%;
+}
