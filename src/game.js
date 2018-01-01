@@ -1,7 +1,7 @@
 const Game=function(topLeft,bottomRight) {
   this.topLeft=topLeft;
   this.bottomRight=bottomRight;
-  this.score = 0;
+  this.score = new Score(10);
   this.snake={};
   this.food={};
 }
@@ -11,7 +11,7 @@ Game.prototype.addSnake=function(snake) {
 }
 
 Game.prototype.getSnake=function() {
-  return snake;
+  return this.snake;
 }
 
 Game.prototype.turnLeft=function() {
@@ -56,9 +56,9 @@ Game.prototype.createFood=function() {
   this.food=new Food(position,growthFactor,superFood);
 }
 
-Game.prototype.addScore = function(){
-  this.score = new Score(10);
-}
+// Game.prototype.addScore = function(){
+//   this.score =
+// }
 
 Game.prototype.updateScore = function(){
   return this.score.updateScore();

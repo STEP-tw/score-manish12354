@@ -29,9 +29,9 @@ const unpaintSnake=function(pos) {
   paintCell(pos,"");
 }
 
-const showScore = function(){
+const showScore = function(score){
   let scoreId = document.getElementById("score");
-  scoreId.innerText=`score: ${game.getScore()}`;
+  scoreId.innerText=`score: ${score}`;
 }
 
 const drawSnake=function(snake) {
